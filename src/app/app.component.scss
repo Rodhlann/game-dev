@@ -1,0 +1,97 @@
+.body {
+  padding: 5px 25% 5px 25%;
+  height: 100%;
+
+  .nav-bar {
+    background-color: #8faebe;
+    color: white;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;
+
+    .nav-header {
+      color: #005b95;
+      font-weight: bold;
+      display: inline-block;
+      padding: 0px 20px;
+    }
+
+    .nav-header:focus {
+      outline: none;
+    }
+  
+    .nav-content {
+      display: inline;
+      padding-right: 10px;
+      cursor: pointer;
+    }
+
+    .nav-content:focus {
+      outline: none;
+    }
+
+    .nav-content:hover {
+      text-decoration: underline;
+    }
+
+    .selected {
+      color: #010e1f;
+    }
+  }
+  
+  .content {
+    padding: 10px;
+  }
+
+  .footer {
+    background-color: #8faebe;
+    display: flex;
+    justify-content: space-between;
+    padding: 2%;
+
+    .email {
+      .subheading {
+        color: #005b95;
+        display: block;
+        padding-bottom: 5px;
+        font-weight: bold;
+      }
+    }
+
+    .social {
+      padding-bottom: 5px;
+
+      a {
+        display:block;
+      }
+    }
+
+    .description {
+      width: 40%;
+      text-align: justify;
+    }
+
+    /* unvisited link */
+    a:link {
+      color: #010e1f;
+      text-decoration: none;
+    }
+    /* visited link */
+    a:visited {
+      color: #010e1f;
+      text-decoration: none;
+    }
+    /* mouse over link */
+    a:hover {
+      color: #010e1f;
+      text-decoration: underline;
+    }
+    /* selected link */
+    a:active {
+      color: #010e1f;
+      text-decoration: underline;
+    }
+  }
+}
