@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { MarkdownModule } from 'ngx-markdown';
 
 import { AppComponent } from './app.component';
 import { GlobalDataServiceService } from './service/global-data-service.service';
@@ -11,6 +12,8 @@ import { ContactComponent } from './modules/contact/contact.component';
 import { HomeComponent } from './modules/home/home.component';
 import { PageNotFoundComponent } from './modules/page-not-found/page-not-found.component';
 import { NavBarComponent } from './modules/nav-bar/nav-bar.component';
+import { HomePostsComponent } from './modules/home/home-posts/home-posts.component';
+import { PostService } from './service/post.service';
 
 const AppRoutes: Routes = [
   { path: 'post/:id', component: PostDetailComponent },
@@ -32,15 +35,20 @@ const AppRoutes: Routes = [
     HomeComponent,
     PageNotFoundComponent,
     NavBarComponent,
+    HomePostsComponent,
   ],
   imports: [
     BrowserModule,
+    MarkdownModule.forRoot(),
     RouterModule.forRoot(
       AppRoutes,
       { enableTracing: false }
     )
   ],
-  providers: [GlobalDataServiceService],
+  providers: [
+    GlobalDataServiceService,
+    PostService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

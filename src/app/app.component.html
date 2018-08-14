@@ -1,45 +1,33 @@
-<div class="body">
+<div class="wrapper">
   <div class="nav-bar">
     <nav>
       <div class="nav-header" routerLink="">
         {{ title }}
       </div>
-      <div
-        (click)="setFocus($event)"
-        class="nav-content selected" 
-        routerLink="/home"
-      >Home</div>
-      <div
-        (click)="setFocus($event)"
-        class="nav-content" 
-        routerLink="/about"
-      >About</div>
-      <div
-        (click)="setFocus($event)"
-        class="nav-content" 
-        routerLink="/posts"
-      >Posts</div>
-      <div
-        (click)="setFocus($event)" 
-        class="nav-content" 
-        routerLink="/contact"
-      >Contact</div>
+      <div class="nav-content selected" routerLink="/home">Home</div>
+      <div class="nav-content" routerLink="/about">About</div>
+      <div class="nav-content" routerLink="/posts">Posts</div>
+      <div class="nav-content" routerLink="/contact">Contact</div>
     </nav>
   </div>
-  <div class="content">
-    <router-outlet></router-outlet>
-  </div>
-  <div class="footer">
-    <div class="email">
-      <label class="subheading">Email me!</label>
-      <a href="mailto:{{ email }}">{{ email }}</a>
+  <div class="content-wrapper">
+    <div class="content">
+      <router-outlet></router-outlet>
     </div>
-    <div class="social">
-      <a href="https://www.twitter.com/{{ twitter }}"><i class="fab fa-twitter"></i> {{ twitter }}</a>
-      <a href="https://www.github.com/{{ github }}"><i class="fab fa-github"></i> {{ github }}</a>
-    </div>
-    <div class="description">
-      {{ description }}
+    <div class="footer">
+      <div class="email">
+        <label class="subheading">Email me!</label>
+        <a href="mailto:{{ email }}">{{ email }}</a>
+      </div>
+      <div class="social">
+        <a href="https://www.twitter.com/{{ twitter }}">
+          <i class="fab fa-twitter"></i> {{ twitter }}</a>
+        <a href="https://www.github.com/{{ github }}">
+          <i class="fab fa-github"></i> {{ github }}</a>
+      </div>
+      <div class="description">
+        {{ description }}
+      </div>
     </div>
   </div>
 </div>

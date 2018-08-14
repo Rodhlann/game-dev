@@ -1,0 +1,10 @@
+@import '../../../styles.scss';
+
+.home-wrapper {
+  padding: 10px 0px;
+
+  .home-subheader {
+    padding-top: 20px;
+    color: $subheading;
+  }
+}
