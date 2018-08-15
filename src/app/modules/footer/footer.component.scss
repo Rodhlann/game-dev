@@ -1,0 +1,53 @@
+@import '../../../styles.scss';
+
+.footer {
+  margin: 0px 25%;
+  padding: 2% 0px;
+  border-top: 1px solid $subheading;
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+
+  .email {
+    .subheading {
+      color: $subheading;
+      display: block;
+      padding-bottom: 5px;
+      font-weight: bold;
+    }
+  }
+
+  .social {
+    padding-bottom: 10px;
+
+    a {
+      display:block;
+    }
+  }
+
+  .description {
+    width: 40%;
+    text-align: justify;
+  }
+
+  /* unvisited link */
+  a:link {
+    color: $link;
+    text-decoration: none;
+  }
+  /* visited link */
+  a:visited {
+    color: $link;
+    text-decoration: none;
+  }
+  /* mouse over link */
+  a:hover {
+    color: $link;
+    text-decoration: underline;
+  }
+  /* selected link */
+  a:active {
+    color: $link;
+    text-decoration: underline;
+  }
+}
