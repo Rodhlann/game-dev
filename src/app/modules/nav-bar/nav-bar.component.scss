@@ -1,0 +1,48 @@
+@import '../../../styles.scss';
+
+.nav-bar {
+  z-index: 1000;
+  overflow: hidden;
+  background-color: $primary-background;
+  height: $header-height;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 20px;
+  right: 0;
+  left: 0;
+  top: 0;
+  position: fixed;
+  padding: $content-padding;
+
+
+  .nav-header {
+    color: $heading;
+    font-weight: bold;
+    display: inline-block;
+    padding-right: 20px;
+  }
+
+  .nav-header:focus {
+    outline: none;
+  }
+
+  .nav-content {
+    display: inline;
+    cursor: pointer;
+    padding: 10px 5px;
+  }
+
+  .nav-content:focus {
+    outline: none;
+  }
+
+  .nav-content:hover {
+    border-bottom: 5px solid $heading;
+  }
+
+  .selected {
+    color: $subheading;
+    border-bottom: 5px solid $heading;
+  }
+}
