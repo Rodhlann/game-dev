@@ -1,3 +1,10 @@
-<p>
-  code-view works!
-</p>
+<div class="posts-wrapper">
+  <div *ngIf="posts.length">
+    <div *ngFor="let post of posts">
+      <post-summary [post]="post"></post-summary>
+    </div>
+  </div>
+  <div class="posts-not-found" *ngIf="!posts.length">
+    No posts found :(
+  </div>
+</div>

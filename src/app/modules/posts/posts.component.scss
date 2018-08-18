@@ -1,0 +1,16 @@
+@import '../../../styles.scss';
+
+.input-wrapper {
+  width: 100%;
+  padding-top: 20px;
+  direction: rtl;
+
+  input {
+    direction: ltr;
+    outline: none;
+    padding: 5px;
+    color: $text;
+    border: 1px solid $primary-background;
+    border-radius: 3px;
+  }
+}

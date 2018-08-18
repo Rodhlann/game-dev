@@ -9,11 +9,26 @@
   .content-wrapper {
     position: absolute;
     overflow-y: auto;
+    
     padding-top: $header-height;
 
     .content {
-      padding: $content-padding;
+      // TODO: Something to do with this to fix the overflow bs
+      padding: 0px 25%;
       height: 70%;
+
+      ::ng-deep
+      .posts-not-found {
+        width: 100%;
+        padding: 30px 0px 50px 0px;
+        text-align: center;
+        font-size: 30px;
+        color: $text;
+      }
+    }
+
+    .posts-wrapper {
+      padding: 10px 0px;
     }
   }
 }

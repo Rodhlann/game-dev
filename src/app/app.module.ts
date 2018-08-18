@@ -11,11 +11,11 @@ import { PostsComponent } from './modules/posts/posts.component';
 import { HomeComponent } from './modules/home/home.component';
 import { PageNotFoundComponent } from './modules/page-not-found/page-not-found.component';
 import { NavBarComponent } from './modules/nav-bar/nav-bar.component';
-import { HomePostsComponent } from './modules/home/home-posts/home-posts.component';
 import { PostService } from './service/post.service';
 import { FooterComponent } from './modules/footer/footer.component';
 import { CodeViewComponent } from './modules/code-view/code-view.component';
 import { ArtViewComponent } from './modules/art-view/art-view.component';
+import { PostSummaryComponent } from './modules/post-summary/post-summary.component';
 
 const AppRoutes: Routes = [
   { path: 'post/:id', component: PostDetailComponent },
@@ -38,7 +38,7 @@ const AppRoutes: Routes = [
     HomeComponent,
     PageNotFoundComponent,
     NavBarComponent,
-    HomePostsComponent,
+    PostSummaryComponent,
     CodeViewComponent,
     ArtViewComponent,
   ],
