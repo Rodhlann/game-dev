@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { AboutComponent } from './about.component';
+import { MarkdownComponent, MarkdownModule, MarkdownService, MarkedOptions } from 'ngx-markdown';
 
 describe('AboutComponent', () => {
   let component: AboutComponent;
@@ -8,7 +9,12 @@ describe('AboutComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ AboutComponent ]
+      imports: [MarkdownModule],
+      declarations: [ AboutComponent ],
+      providers: [
+        MarkdownService,
+        MarkedOptions
+      ]
     })
     .compileComponents();
   }));

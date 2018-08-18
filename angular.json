@@ -22,9 +22,6 @@
             ],
             "styles": [
               "src/styles.scss"
-            ],
-            "scripts": [
-              "node_modules/marked/lib/marked.js"
             ]
           },
           "configurations": {
@@ -72,14 +69,9 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "src/tsconfig.spec.json",
             "scripts": [
-              "src/node_modules/marked/lib/marked.js",
-              "src/node_modules/prismjs/prism.js",
-              "src/node_modules/prismjs/components/prism-csharp.min.js",
-              "src/node_modules/prismjs/components/prism-css.min.js"
             ],
             "styles": [
-              "src/styles.scss",
-              "src/node_modules/prismjs/themes/prism-okaidia.css"
+              "src/styles.scss"
             ],
             "assets": [
               "src/assets",

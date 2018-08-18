@@ -1,6 +1,9 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ArtViewComponent } from './art-view.component';
+import { PostSummaryComponent } from '../post-summary/post-summary.component';
+import { RouterTestingModule } from '@angular/router/testing';
+import { PostService } from '../../service/post.service';
 
 describe('ArtViewComponent', () => {
   let component: ArtViewComponent;
@@ -8,7 +11,16 @@ describe('ArtViewComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ArtViewComponent ]
+      imports: [
+        RouterTestingModule
+      ],
+      declarations: [
+        ArtViewComponent,
+        PostSummaryComponent
+      ],
+      providers: [
+        PostService
+      ]
     })
     .compileComponents();
   }));

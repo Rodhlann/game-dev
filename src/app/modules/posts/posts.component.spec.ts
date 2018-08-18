@@ -1,6 +1,10 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { PostsComponent } from './posts.component';
+import { PostSummaryComponent } from '../post-summary/post-summary.component';
+import { RouterTestingModule } from '@angular/router/testing';
+import { MarkdownModule } from 'ngx-markdown';
+import { PostService } from '../../service/post.service';
 
 describe('PostsComponent', () => {
   let component: PostsComponent;
@@ -8,7 +12,17 @@ describe('PostsComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PostsComponent ]
+      imports: [
+        RouterTestingModule,
+        MarkdownModule
+      ],
+      declarations: [
+        PostsComponent,
+        PostSummaryComponent
+      ],
+      providers: [
+        PostService
+      ]
     })
     .compileComponents();
   }));
