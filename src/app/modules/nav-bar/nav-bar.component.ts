@@ -23,7 +23,6 @@ export class NavBarComponent {
       filter((event: any) => event instanceof NavigationEnd)
     ).subscribe((event: any) => {
       const buttonElements = this.elementRef.nativeElement.querySelectorAll('.nav-content');
-      console.log(event.url);
       buttonElements.forEach((element: any) => {
         if (event.url.indexOf(element.textContent.toLowerCase()) !== -1) {
           this.renderer.addClass(element, 'selected');

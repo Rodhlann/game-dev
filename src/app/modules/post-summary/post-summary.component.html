@@ -1,0 +1,13 @@
+<div class="post">
+  <div class="image">
+    <img src="{{ post.image }}"/>
+  </div>
+  <div class="text-content">
+    <div class="date">
+      <span *ngIf="post.type"><b>{{ post.type }}</b> ~</span> {{ post.date }}
+    </div>
+    <a class="title" [routerLink]="['/post', post.id]">
+      {{ post.title }}
+    </a>
+  </div>
+</div>

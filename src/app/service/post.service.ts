@@ -1,35 +1,34 @@
 import { Injectable } from '@angular/core';
 import { Post } from '../models/post.model';
 import { PostType } from '../models/post-type.enum';
+import * as posts from '../../data/posts/2018/posts';
 
 @Injectable()
 export class PostService {
+  private posts: Post[];
 
-  constructor() { }
-
-  public getRecentPosts(): Post[] {
-    const post: Post = {
-      date: new Date().toDateString(),
-      title: 'POST',
-      type: PostType.ART,
-      content:
-        `Aute sint sint quis consequat occaecat ut.
-        Proident cillum et qui incididunt id. Labore
-        elit exercitation amet ipsum nisi id officia
-        cupidatat enim est.`
-    };
-
-    const post1: Post = {
-      date: new Date().toDateString(),
-      title: 'POST1',
-      type: PostType.CODE,
-      content:
-        `Aute sint sint quis consequat occaecat ut.`
-    };
-
-    return [
-      post, post1, post, post1
-    ];
+  constructor() {
+    this.posts = posts.default.sort((a, b) => b.id - a.id);
   }
 
+  public getAllPosts(): Post[] {
+    return this.posts;
+  }
+
+  public getArtPosts(): Post[] {
+    return this.posts.filter((post: Post) => post.type === PostType.ART);
+  }
+
+  public getCodePosts(): Post[] {
+    return this.posts.filter((post: Post) => post.type === PostType.CODE);
+  }
+
+  public getRecentPosts(): Post[] {
+    return this.posts
+    .slice(0, 4);
+  }
+
+  public getPostById(id: any): Post {
+    return this.posts.filter((post: Post) => +post.id === +id)[0];
+  }
 }

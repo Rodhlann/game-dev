@@ -1,3 +1,9 @@
-<p>
-  post-detail works!
-</p>
+<div *ngIf="post" class="post-detail-wrapper">
+  <img src="{{ post.image }}" />
+  <p>Published: {{ post.date }} </p>
+  <h1>{{ post.title }}</h1>
+  <markdown ngPreserveWhitespaces>
+    {{ post.content }}
+  </markdown>
+</div>
+<page-not-found *ngIf="!post"></page-not-found>

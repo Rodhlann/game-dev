@@ -1,13 +1,12 @@
-@import '../../../../styles.scss';
+@import '../../../styles.scss';
 
-.home-post {
-  width: 100%;
+.post {
   margin: 20px 0px;
   box-shadow: 0px 5px 20px #bfbfbf;
-
+  
   .image {
     height: 200px;
-
+    padding: 5px 0px;
     display: flex;
     justify-content: center;
     background-color: $heading;
@@ -18,20 +17,16 @@
     padding: 30px;
 
     .date {
-      padding-bottom: 10px;
+      padding-bottom: 15px;
       font-size: 12px;
       color: $primary-background;
     }
 
     .title {
       color: $heading;
-      padding-bottom: 10px;
       font-weight: bolder;
       font-size: 20px;
-      text-rendering: optimizeLegibility;
-    }
-
-    .content {
+      text-decoration: none;
     }
   }
 }

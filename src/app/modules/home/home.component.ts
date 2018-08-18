@@ -8,9 +8,9 @@ import { Post } from '../../models/post.model';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
-  public recentPosts: Post[];
+  public posts: Post[];
 
   constructor(private postService: PostService) {
-    this.recentPosts = this.postService.getRecentPosts();
+    this.posts = this.postService.getRecentPosts();
   }
 }
