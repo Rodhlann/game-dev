@@ -17,6 +17,12 @@ export class PostDetailComponent {
   ) {
     const id = <Post>(this.route.snapshot.paramMap.get('id'));
     this.post = this.postService.getPostById(id);
-    console.log(this.post);
+    this.prepareData();
+  }
+
+  private prepareData() {
+    if (!this.post.image) {
+      this.post.image = '../../../assets/no-image.png';
+    }
   }
 }

@@ -2,6 +2,8 @@
   <img src="{{ post.image }}" />
   <p>Published: {{ post.date }} </p>
   <h1>{{ post.title }}</h1>
-  <p>{{ post.content }} </p>
+  <markdown ngPreserveWhitespaces>
+    {{ post.content }}
+  </markdown>
 </div>
 <page-not-found *ngIf="!post"></page-not-found>

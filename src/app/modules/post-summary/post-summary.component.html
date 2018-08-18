@@ -4,13 +4,10 @@
   </div>
   <div class="text-content">
     <div class="date">
-      <b>{{ post.type }}</b> ~ {{ post.date }}
+      <span *ngIf="post.type"><b>{{ post.type }}</b> ~</span> {{ post.date }}
     </div>
     <a class="title" [routerLink]="['/post', post.id]">
       {{ post.title }}
     </a>
-    <p class="post-content">
-      {{ post.content }}
-    </p>
   </div>
 </div>

@@ -6,6 +6,7 @@
   
   .image {
     height: 200px;
+    padding: 5px 0px;
     display: flex;
     justify-content: center;
     background-color: $heading;
@@ -14,20 +15,9 @@
   .text-content {
     background-color: white;
     padding: 30px;
-    width: inherit;
-
-    // TODO: This is fucking BROKEN
-    .post-content {
-      overflow: hidden;
-      // THIS SPECIFICALLY. FUCK THIS THING IN PARTICULAR 
-      white-space: nowrap;
-      text-overflow: ellipsis;
-      padding-top: 10px;
-      margin: 0px;
-    }
 
     .date {
-      padding-bottom: 10px;
+      padding-bottom: 15px;
       font-size: 12px;
       color: $primary-background;
     }

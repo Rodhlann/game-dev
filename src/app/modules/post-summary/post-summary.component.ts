@@ -7,7 +7,17 @@ import { Post } from '../../models/post.model';
   templateUrl: './post-summary.component.html',
   styleUrls: ['./post-summary.component.scss']
 })
-export class PostSummaryComponent {
+export class PostSummaryComponent implements OnInit {
   @Input()
   public post: Post;
+
+  public ngOnInit() {
+    this.prepareData();
+  }
+
+  private prepareData() {
+    if (!this.post.image) {
+      this.post.image = '../../../assets/no-image.png';
+    }
+  }
 }
